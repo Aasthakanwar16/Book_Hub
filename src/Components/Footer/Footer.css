@@ -1,0 +1,43 @@
+/* Footer styling */
+.footer {
+  background-color: #444141;
+  color: #fff;
+  padding: 70px;
+  text-align: center;
+}
+
+/* Footer paragraphs */
+.footer p {
+  margin: 19px 10px;
+  font-family: Arial, sans-serif;
+  gap: 50px;
+  font-size: 18px;
+}
+
+/* First paragraph style */
+.footer p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(153, 97, 97);
+}
+
+/* Second paragraph style */
+.footer p:nth-child(2) {
+  font-style: italic;
+}
+
+/* Last paragraph style */
+.footer p:last-child {
+  font-size: 18px;
+  color: blue;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 600px) {
+  .footer {
+      padding: 10px;
+  }
+  .footer p:last-child {
+      font-size: 16px;
+  }
+}

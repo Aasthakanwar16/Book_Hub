@@ -1,0 +1,136 @@
+/* Basic styles for the body */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/h6.jpg'); /* Background image applied to the whole page */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 17px 20px; /* Padding around the navbar */
+  width: 100%; /* Make it span the full width */
+  z-index: 1000; /* Ensure it sits above other content */
+  position: absolute; /* Position it within the background image */
+  top: 0; /* Position it at the top */
+}
+
+/* Logo styling */
+nav .logo {
+  color: #fdfcf9; /* Initial color for the text */
+  text-decoration: none;
+  font-size: 28px; /* Larger font size */
+  font-family: 'Lobster', cursive; /* Apply the Google Font */
+  padding-left: 0px;
+  
+  text-shadow: 8px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow */
+  font-weight: bold;
+  animation: colorChange 3s infinite; /* Apply the animation */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+nav .logo:hover {
+  color: #4bde6d; /* Change color on hover */
+  text-shadow: 8px 2px 8px rgba(90, 226, 40, 0.7),8px 2px 8px royalblue; /* Change shadow on hover */
+}
+
+
+.menu-icon {
+  display: none;
+}
+
+
+/* List styling */
+nav ul {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Align items horizontally */
+  gap: 3rem; /* Space between list items */
+  margin: 0px;
+
+  padding-right: 200px; /* Adjust padding for better alignment */
+}
+
+
+/* Link styling */
+nav ul li a {
+  color: #dce7e7; /* Light color for the text */
+  text-decoration: none; /* No underline */
+  font-size: 20px;
+  font-family: 'Lobster', cursive; 
+}
+
+nav ul li a:hover {
+  color: aquamarine;
+}
+
+/* Mobile styles for the navigation bar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    padding: 10px; /* Reduce padding */
+  }
+
+  nav .logo {
+    font-size: 39px; /* Adjust size as needed */
+    margin-bottom: 0px;
+    margin-top: 30px; /* Space below the logo */
+  }
+  .menu-icon {
+    display: block;
+    font-size: 38px;
+    cursor: pointer;
+    color: #e8efef;
+    margin-left: 350px;/* Align icon to the left */
+ margin-bottom: 20px;
+  }
+ 
+
+  
+  .nav-links {
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack list items vertically */
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    padding-left: 10px; /* Add left padding */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack list items vertically */
+    width: 100%; /* Full width for the dropdown */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+
+  nav ul li {
+    width: 100%;
+    margin: 10px 0;
+    padding-left: 10px; /* Add left padding for better alignment */
+  }
+
+  nav ul li a {
+    font-size: 18px; /* Adjust font size */
+    display: block;
+    padding: 10px;
+    color: #dce7e7;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    background-color: #ba0d0d; /* Background color on hover */
+    color: white;
+  }
+}
